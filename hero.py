@@ -25,8 +25,64 @@ class SuperHero:
 
 superHero = SuperHero('zuba', 'Halk', 'speed',
                       50, 'hehe')
-superHero.print_name()
-superHero.health_2()
-print(superHero)
-print(len(superHero))
+
+class Air(SuperHero):
+    fly = False
+
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
+        self.damage = damage
+
+    def health_2(self):
+        self.health_points **= 2
+        self.flt = True
+        print(self.health_points)
+
+    def print_t(self):
+        print('True in the True_phrase')
+
+
+
+
+class Earth(SuperHero):
+    fly = False
+
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
+        self.damage = damage
+
+    def health_2(self):
+        self.health_points **= 2
+        self.flt = True
+        print(self.health_points)
+
+
+
+    def print_t(self):
+        print('True in the True_phrase')
+
+
+
+
+class villain(Earth):
+    people = 'monster'
+
+    def gen_x(self):
+        pass
+
+    def crit(self):
+        return self.damage ** 2
+
+
+hero1 = Air('халк', 'стюен', 'сила', 10, 'ааааа', 100)
+hero1.print_t()
+hero1.health_2()
+
+hero2 = Earth('супермен', 'паркер', 'сила', 10, 'eeeee', 100)
+hero2.print_t()
+hero2.health_2()
+hero2.cread1()
+
+vill = villain('Man', 'men', 'head', 10, 'ooooo', 50)
+print(vill.crit())
 
