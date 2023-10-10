@@ -64,6 +64,7 @@ class Earth(SuperHero):
 
 
 
+
 class villain(Earth):
     people = 'monster'
 
@@ -74,15 +75,14 @@ class villain(Earth):
         return self.damage ** 2
 
 
-hero1 = Air('халк', 'стюен', 'сила', 10, 'ааааа', 100)
+hero1 = Air('халк', 'стюен', 'сила', 100, 'ааааа', 500)
 hero1.print_t()
 hero1.health_2()
 
-hero2 = Earth('супермен', 'паркер', 'сила', 10, 'eeeee', 100)
+hero2 = Earth('супермен', 'паркер', 'сила', 100, 'eeeee', 500)
 hero2.print_t()
 hero2.health_2()
-hero2.cread1()
 
-vill = villain('Man', 'men', 'head', 10, 'ooooo', 50)
+vill = villain('Man', 'men', 'head', 10, 'ooooo', 250)
 print(vill.crit())
 
