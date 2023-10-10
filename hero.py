@@ -27,15 +27,15 @@ superHero = SuperHero('zuba', 'Halk', 'speed',
                       50, 'hehe')
 
 class Air(SuperHero):
-    fly = False
 
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly=False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
+        self.fly = fly
 
     def health_2(self):
         self.health_points **= 2
-        self.flt = True
+        self.fly = True
         print(self.health_points)
 
     def print_t(self):
@@ -45,15 +45,15 @@ class Air(SuperHero):
 
 
 class Earth(SuperHero):
-    fly = False
 
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly=False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
+        self.fly = True
 
     def health_2(self):
         self.health_points **= 2
-        self.flt = True
+        self.fly = True
         print(self.health_points)
 
 
