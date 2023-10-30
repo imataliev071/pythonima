@@ -24,9 +24,9 @@ with sql.connect('студент.db') as conn:
     #        ('алибек', 'алтынбеков', 2004, 'футбол', 0)
     # ''')
     cur.execute('''SELECT * FROM студент WHERE length(фамилия) > 10''')
-    cur.execute('''UPDATE студент SET имя = 'genius' WHERE length(фамилия) > 10''')
-    c = cur.execute('''DELETE FROM студент WHERE id  % 2 = 0''')
-    cur.execute('''SELECT * FROM студент''')
+    # cur.execute('''UPDATE студент SET имя = 'genius' WHERE балы_за_дз > 10''')
+    # c = cur.execute('''DELETE FROM студент WHERE id  % 2 = 0''')
+    # cur.execute('''SELECT * FROM студент''')
     wor = cur.fetchall()
     for i in wor:
         print(i)
